@@ -241,6 +241,16 @@ Examples:
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
 - [Git Cheat Sheet (PDF)](https://education.github.com/git-cheat-sheet-education.pdf)
 
+Additional helpful resources:
+
+Git Flight Rules - Detailed guide for what to do when things go wrong
+Learn Git Branching - Interactive Git tutorial
+Conventional Commits - Specification for commit message format
+Git Explorer - Find the right commands you need without memorization
+GitHub Skills - Interactive courses for learning Git and GitHub
+
+Note: Links are regularly maintained but you may want to check for the most recent documentation versions.
+
 ---
 
 **Note**: This guide is optimized for both human reference and AI assistance. Each section is clearly demarcated with consistent formatting and explicit command examples to ensure accurate interpretation by language models. For interactive help, you can feed relevant sections to your preferred AI assistant.
