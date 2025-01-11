@@ -171,17 +171,24 @@ chmod +x scripts/setup-structure.sh
 
 #### Option B: Manual Structure Setup
 ```bash
-# Create project directories
+# Create project directories (adjusted for Next.js app router)
 mkdir -p \
-  src/app/(auth) \
-  src/app/(dashboard) \
-  src/app/api \
+  src/app/(auth)/login \
+  src/app/(auth)/register \
+  src/app/(dashboard)/dashboard \
+  src/app/api/agents \
+  src/app/api/auth \
   src/components/ui \
   src/components/shared \
   src/components/forms \
   src/lib/agents \
-  src/lib/ai/{llms,memory,tools} \
-  src/lib/db/{migrations,queries,schema,vectors} \
+  src/lib/ai/llms \
+  src/lib/ai/memory \
+  src/lib/ai/tools \
+  src/lib/db/migrations \
+  src/lib/db/queries \
+  src/lib/db/schema \
+  src/lib/db/vectors \
   src/lib/graph \
   src/lib/utils \
   src/types \
