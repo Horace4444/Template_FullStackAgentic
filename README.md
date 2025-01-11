@@ -391,117 +391,6 @@ Apply the migration:
 supabase db reset
 ```
 
-## Git Setup
-
-### 1. Initialize Repository
-
-```bash
-# Initialize git
-git init
-
-# Add .gitignore
-cat > .gitignore << EOL
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# Supabase
-/supabase/.branches
-/supabase/.temp
-EOL
-
-# Initial commit
-git add .
-git commit -m "Initial commit"
-```
-
-### 2. Setup Git Hooks
-
-```bash
-# Initialize Husky
-pnpm dlx husky-init && pnpm install
-
-# Add pre-commit hook
-pnpm dlx husky add .husky/pre-commit "pnpm lint-staged"
-```
-
-Create `.lintstagedrc.js`:
-```javascript
-module.exports = {
-  '*.{js,jsx,ts,tsx}': ['eslint --fix', 'prettier --write'],
-  '*.{json,css,md}': ['prettier --write'],
-};
-```
-
-## Project Structure
-
-Create the required directories:
-
-```bash
-mkdir -p \
-  app/(auth) \
-  app/(dashboard) \
-  app/api \
-  components/ui \
-  components/shared \
-  components/forms \
-  lib/agents \
-  lib/ai/{llms,memory,tools} \
-  lib/db/{migrations,queries,schema,vectors} \
-  lib/graph \
-  lib/utils \
-  types \
-  config
-```
-
-## Verification
-
-Run these commands to verify your setup:
-
-```bash
-# Type checking
-pnpm type-check
-
-# Linting
-pnpm lint
-
-# Test Supabase connection
-supabase status
-
-# Start development server
-pnpm dev
-```
-
 ## Troubleshooting
 
 ### Common Issues
@@ -533,33 +422,9 @@ rm -rf components/ui
 pnpm dlx shadcn-ui@latest init
 ```
 
-## 🚀 Getting Started
-
-1. Clone and install:
+5. Test Supabase connection status:
 ```bash
-git clone https://github.com/your-username/your-project-name
-cd your-project-name
-npm install
-```
-
-2. Set up environment variables:
-```bash
-cp .env.example .env.local
-```
-
-Required variables:
-```env
-# App
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-
-# AI Services
-OPENAI_API_KEY=your_openai_key
-ANTHROPIC_API_KEY=your_anthropic_key
-TAVILY_API_KEY=your_tavily_key
+supabase status
 ```
 
 ## 📚 Documentation
@@ -574,13 +439,10 @@ TAVILY_API_KEY=your_tavily_key
 
 MIT License - see LICENSE.md
 
-
-
-
 ### Next Steps
 
 1. Add your API keys to `.env.local`
 2. Create your first AI agent in `lib/agents`
 3. Set up your database schema
-4. Start building your application!
+4. LFG
 
