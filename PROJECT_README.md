@@ -122,7 +122,7 @@ pnpm add @langchain/anthropic@^0.0.9 \
   @supabase/auth-helpers-nextjs@^0.8.7 \
   @supabase/ssr@^0.0.10 \
   @supabase/supabase-js@^2.39.3 \
-  @tavily/core@^0.2.0 \
+  @tavily/core@^0.0.2 \
   class-variance-authority@^0.7.0 \
   clsx@^2.1.0 \
   tailwind-merge@^2.2.0 \
