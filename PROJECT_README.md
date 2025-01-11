@@ -160,9 +160,9 @@ pnpm add -D @playwright/test@latest \
 ```bash
 # Create project directories (adjusted for Next.js app router)
 mkdir -p \
-  src/app/(auth)/login \
-  src/app/(auth)/register \
-  src/app/(dashboard)/dashboard \
+  "src/app/(auth)/login" \
+  "src/app/(auth)/register" \
+  "src/app/(dashboard)/dashboard" \
   src/app/api/agents \
   src/app/api/auth \
   src/components/ui \
