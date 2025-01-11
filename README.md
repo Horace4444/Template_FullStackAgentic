@@ -58,7 +58,12 @@ A production-ready template for building AI-powered applications with robust dat
 │   ├── graph/          # LangGraph configurations
 │   └── utils/          # Utility functions
 ├── types/              # TypeScript types
-└── config/            # Configuration files
+├── config/            # Configuration files
+├── docs/              # Documentation files
+└── scripts/           # Setup and utility scripts
+    ├── setup-env.sh
+    ├── init-project.sh
+    └── setup-structure.sh
 ```
 
 ## 🛠️ Installation & Setup
