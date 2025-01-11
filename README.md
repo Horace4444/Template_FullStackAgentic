@@ -61,63 +61,158 @@ A production-ready template for building AI-powered applications with robust dat
 └── config/            # Configuration files
 ```
 
-## Prerequisites
+## 🛠️ Installation & Setup
 
-Before starting, ensure you have the following installed:
+### Step 1: Environment Setup
 
-### Required Tools
+#### Option A: Automatic Setup (Recommended)
 ```bash
-# 1. Node.js (v18.17 or higher)
-node --version
-# If needed, install via nvm (recommended)
+git clone https://github.com/your-username/your-project-name
+cd your-project-name
+chmod +x scripts/setup-env.sh
+./scripts/setup-env.sh
+```
+
+#### Option B: Manual Environment Setup
+```bash
+# Install Homebrew (if needed)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Node.js via nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.zshrc  # or restart terminal
 nvm install 18
 nvm use 18
 
-# 2. pnpm (v8.x or higher)
 # Install pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
-# Verify installation
-pnpm --version
 
-# 3. Git
-git --version
-# If needed, install Git:
-# On macOS:
-brew install git
-# On Ubuntu:
-sudo apt-get update && sudo apt-get install git
-# On Windows: Download from https://git-scm.com/download/win
-
-# 4. PostgreSQL (v15 or higher - needed for Supabase local development)
-psql --version
-# On macOS:
-brew install postgresql@15
-# On Ubuntu:
-sudo apt-get install postgresql-15
-
-# 5. Docker (for Supabase local development)
-docker --version
-# Install from https://docs.docker.com/get-docker/
+# Install PostgreSQL & Docker
+brew install postgresql@15 
+brew services start postgresql@15
+brew install --cask docker
 ```
 
-### Environment Setup
+### Step 2: Project Initialization
 
-1. Create a new directory for your project:
+#### Option A: Automatic Setup
 ```bash
-mkdir my-ai-project
-cd my-ai-project
+chmod +x scripts/init-project.sh
+./scripts/init-project.sh
 ```
 
-2. Initialize new Next.js project:
+#### Option B: Manual Project Setup
+1. Create Next.js project:
 ```bash
-pnpm create next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias "@/*"
+pnpm create next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
 ```
 
-3. Clean up default files:
+2. Install core dependencies:
 ```bash
-rm -rf app/page.tsx app/globals.css
-rm -rf public/*
+pnpm add @langchain/anthropic@^0.0.9 \
+  @langchain/community@^0.0.26 \
+  @langchain/core@^0.1.22 \
+  @langchain/langgraph@^0.0.6 \
+  @langchain/openai@^0.0.14 \
+  @supabase/auth-helpers-nextjs@^0.8.7 \
+  @supabase/ssr@^0.0.10 \
+  @supabase/supabase-js@^2.39.3 \
+  @tavily/js@^0.2.0 \
+  class-variance-authority@^0.7.0 \
+  clsx@^2.1.0 \
+  tailwind-merge@^2.2.0 \
+  tailwindcss-animate@^1.0.7 \
+  zod@^3.22.4 \
+  zustand@^4.5.0
+```
+
+3. Install development dependencies:
+```bash
+pnpm add -D @playwright/test@^1.41.1 \
+  @testing-library/jest-dom@^6.3.0 \
+  @testing-library/react@^14.1.2 \
+  @types/jest@^29.5.11 \
+  @types/node@^20.11.5 \
+  @types/react@^18.2.48 \
+  @types/react-dom@^18.2.18 \
+  @typescript-eslint/eslint-plugin@^6.19.1 \
+  @typescript-eslint/parser@^6.19.1 \
+  autoprefixer@^10.4.17 \
+  eslint@^8.56.0 \
+  eslint-config-next@14.1.0 \
+  eslint-config-prettier@^9.1.0 \
+  eslint-plugin-react@^7.33.2 \
+  eslint-plugin-react-hooks@^4.6.0 \
+  husky@^8.0.3 \
+  jest@^29.7.0 \
+  jest-environment-jsdom@^29.7.0 \
+  lint-staged@^15.2.0 \
+  postcss@^8.4.33 \
+  prettier@^3.2.4 \
+  prettier-plugin-tailwindcss@^0.5.11 \
+  supabase@^1.136.3 \
+  tailwindcss@^3.4.1 \
+  typescript@^5.3.3
+```
+
+### Step 3: Project Structure Setup
+
+#### Option A: Automatic Setup
+```bash
+chmod +x scripts/setup-structure.sh
+./scripts/setup-structure.sh
+```
+
+#### Option B: Manual Structure Setup
+```bash
+# Create project directories
+mkdir -p \
+  src/app/(auth) \
+  src/app/(dashboard) \
+  src/app/api \
+  src/components/ui \
+  src/components/shared \
+  src/components/forms \
+  src/lib/agents \
+  src/lib/ai/{llms,memory,tools} \
+  src/lib/db/{migrations,queries,schema,vectors} \
+  src/lib/graph \
+  src/lib/utils \
+  src/types \
+  src/config \
+  scripts \
+  docs
+```
+
+### Step 4: Configuration
+
+1. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
+
+2. Configure your `.env.local` with required API keys:
+```env
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+# ... other environment variables
+```
+
+### Verification
+
+After completing all steps, verify your setup:
+```bash
+# Verify core tools
+node --version     # Should be v18.x
+pnpm --version    # Should be v8.x
+git --version     # Should be v2.x
+psql --version    # Should be v15.x
+docker --version  # Should be v20.x or higher
+
+# Verify project setup
+pnpm run dev      # Should start Next.js development server
+pnpm run lint     # Should run ESLint
+pnpm run test     # Should run tests
 ```
 
 ## Package Installation
