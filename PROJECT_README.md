@@ -114,51 +114,50 @@ pnpm create next-app@latest . --typescript --tailwind --eslint --app --src-dir -
 
 2. Install core dependencies:
 ```bash
-pnpm add @langchain/anthropic@^0.0.9 \
-  @langchain/community@^0.0.26 \
-  @langchain/core@^0.1.22 \
-  @langchain/langgraph@^0.0.6 \
-  @langchain/openai@^0.0.14 \
+pnpm add @langchain/anthropic@latest \
+  @langchain/community@latest \
+  @langchain/core@latest \
+  @langchain/langgraph@latest \
+  @langchain/openai@latest \
   @supabase/ssr@latest \
   @supabase/supabase-js@latest \
-  @tavily/core@^0.0.2 \
-  class-variance-authority@^0.7.0 \
-  clsx@^2.1.0 \
-  react@^19.0.0 \
-  react-dom@^19.0.0 \
-  tailwind-merge@^2.2.0 \
-  tailwindcss-animate@^1.0.7 \
-  zod@^3.22.4 \
-  zustand@^4.5.0
+  @tavily/core@latest \
+  class-variance-authority@latest \
+  clsx@latest \
+  next@latest \
+  react@latest \
+  react-dom@latest \
+  tailwind-merge@latest \
+  tailwindcss-animate@latest \
+  zod@latest \
+  zustand@latest
 ```
 
 3. Install development dependencies:
 ```bash
 pnpm add -D @playwright/test@latest \
-  @testing-library/dom@^10.0.0 \
+  @testing-library/dom@latest \
   @testing-library/jest-dom@latest \
-  @testing-library/react@^16.1.0 \
+  @testing-library/react@latest \
   @types/jest@latest \
   @types/node@latest \
-  @types/react@^19.0.4 \
-  @types/react-dom@^19.0.2 \
-  @typescript-eslint/eslint-plugin@^6.21.0 \
-  @typescript-eslint/parser@^6.21.0 \
+  @types/react@latest \
+  @types/react-dom@latest \
+  @typescript-eslint/eslint-plugin@latest \
+  @typescript-eslint/parser@latest \
   autoprefixer@latest \
-  eslint@^8.56.0 \
+  eslint@latest \
   eslint-config-next@latest \
   eslint-config-prettier@latest \
   eslint-plugin-react@latest \
-  eslint-plugin-react-hooks@^5.1.0 \
-  husky@^9.1.7 \
+  eslint-plugin-react-hooks@latest \
+  husky@latest \
   jest@latest \
   jest-environment-jsdom@latest \
   lint-staged@latest \
   postcss@latest \
   prettier@latest \
-  prettier-plugin-tailwindcss@^0.6.9 \
-  supabase@latest \
-  tailwindcss@latest \
+  prettier-plugin-tailwindcss@latest \
   typescript@latest
 ```
 
