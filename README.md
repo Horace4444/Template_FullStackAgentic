@@ -70,12 +70,8 @@ src/
 
 ## 🛠️ Installation & Setup
 
-### Step 1: Environment Setup
+### Optional: Environment Setup
 
-#### Option A: Automatic Setup (Recommended)
-
-
-#### Option B: Manual Environment Setup
 ```bash
 # Install Homebrew (if needed)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -95,9 +91,10 @@ brew services start postgresql@15
 brew install --cask docker
 ```
 
-### Step 2: Project Initialization
+### Begin: Project Initialization
 
 #### Option A: Automatic Setup
+[Create script to run the full setup here ****] 
 
 #### Option B: Manual Project Setup
 1. Create Next.js project:
@@ -154,11 +151,9 @@ pnpm add -D @playwright/test@latest \
   typescript@latest
 ```
 
-### Step 3: Project Structure Setup
+### Project Structure
 
-#### Option A: Automatic Setup
-
-#### Option B: Manual Structure Setup
+#### Directories Setup
 ```bash
 # Create project directories (adjusted for Next.js app router)
 mkdir -p \
@@ -186,7 +181,7 @@ mkdir -p \
   docs
 ```
 
-### Step 4: Configuration
+### Configuration
 
 1. Set up environment variables:
 ```bash
@@ -240,8 +235,6 @@ pnpm run test     # Should run tests
 
 ### Initialize shadcn/ui
 
-You can either initialize with prompts or use defaults:
-
 ```bash
 # With prompts:
 pnpm dlx shadcn@latest init
@@ -276,7 +269,7 @@ pnpm dlx shadcn@latest add button card separator form input dialog dropdown-menu
 ```
 
 
-### 4. Initial Package.json Setup
+### Enhance package.json
 
 Add these scripts to `package.json` configuration file:
 
@@ -295,7 +288,7 @@ Add these scripts to `package.json` configuration file:
 
 ```
 
-### 5. Prettier Configuration
+### Add Prettier Configuration
 
 Create `.prettierrc`:
 ```json
@@ -309,9 +302,9 @@ Create `.prettierrc`:
 }
 ```
 
-## Database Setup
+### Database Setup
 
-### Verify and Initialize Supabase
+#### Verify and Initialize Supabase
 
 ```bash
 # Verify Supabase CLI installation
@@ -324,14 +317,14 @@ supabase init
 supabase start
 ```
 
-### Synchronize Types
+#### Synchronize Types
 
 ```bash
 # Synchronize types with local environment for Typescript alignment
 supabase gen types typescript --local > types/supabase.ts
 ```
 
-### 3. Database Schema Setup
+### Database Schema Setup
 
 Create initial migration:
 
