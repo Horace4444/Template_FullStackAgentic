@@ -254,7 +254,7 @@ If choosing prompts, you'll be asked:
 
 This will create a `components.json` configuration file in your project.
 
-### Install Required Components
+### Install Starter Components
 
 ```bash
 # Install components one at a time
@@ -278,18 +278,10 @@ pnpm dlx shadcn@latest add button card separator form input dialog dropdown-menu
 
 ### 4. Initial Package.json Setup
 
-Create a base `package.json` with our recommended configuration:
+Add these scripts to `package.json` configuration file:
 
 ```json
-{
-  "name": "your-project-name",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
     "db:types": "supabase gen types typescript --linked > types/supabase.ts",
@@ -300,56 +292,7 @@ Create a base `package.json` with our recommended configuration:
     "test": "jest",
     "test:watch": "jest --watch",
     "test:e2e": "playwright test"
-  },
-  "dependencies": {
-    "@langchain/anthropic": "^0.0.9",
-    "@langchain/community": "^0.0.26",
-    "@langchain/core": "^0.1.22",
-    "@langchain/langgraph": "^0.0.6",
-    "@langchain/openai": "^0.0.14",
-    "@radix-ui/react-icons": "^1.3.0",
-    "@supabase/auth-helpers-nextjs": "^0.8.7",
-    "@supabase/ssr": "^0.0.10",
-    "@supabase/supabase-js": "^2.39.3",
-    "@tavily/js": "^0.2.0",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
-    "next": "14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwind-merge": "^2.2.0",
-    "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.22.4",
-    "zustand": "^4.5.0"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.41.1",
-    "@testing-library/jest-dom": "^6.3.0",
-    "@testing-library/react": "^14.1.2",
-    "@types/jest": "^29.5.11",
-    "@types/node": "^20.11.5",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "@typescript-eslint/parser": "^6.19.1",
-    "autoprefixer": "^10.4.17",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "14.1.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.3",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "lint-staged": "^15.2.0",
-    "postcss": "^8.4.33",
-    "prettier": "^3.2.4",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "supabase": "^1.136.3",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
-  }
-}
+
 ```
 
 ### 5. Prettier Configuration
