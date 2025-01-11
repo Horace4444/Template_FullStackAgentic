@@ -119,7 +119,6 @@ pnpm add @langchain/anthropic@^0.0.9 \
   @langchain/core@^0.1.22 \
   @langchain/langgraph@^0.0.6 \
   @langchain/openai@^0.0.14 \
-  @supabase/auth-helpers-nextjs@^0.8.7 \
   @supabase/ssr@^0.0.10 \
   @supabase/supabase-js@^2.39.3 \
   @tavily/core@^0.0.2 \
@@ -133,31 +132,32 @@ pnpm add @langchain/anthropic@^0.0.9 \
 
 3. Install development dependencies:
 ```bash
-pnpm add -D @playwright/test@^1.41.1 \
-  @testing-library/jest-dom@^6.3.0 \
+pnpm add -D @playwright/test@latest \
+  @testing-library/dom@^10.0.0 \
+  @testing-library/jest-dom@latest \
   @testing-library/react@^14.1.2 \
-  @types/jest@^29.5.11 \
-  @types/node@^20.11.5 \
-  @types/react@^18.2.48 \
-  @types/react-dom@^18.2.18 \
-  @typescript-eslint/eslint-plugin@^6.19.1 \
-  @typescript-eslint/parser@^6.19.1 \
-  autoprefixer@^10.4.17 \
+  @types/jest@latest \
+  @types/node@latest \
+  @types/react@^19.0.4 \
+  @types/react-dom@^19.0.2 \
+  @typescript-eslint/eslint-plugin@^6.21.0 \
+  @typescript-eslint/parser@^6.21.0 \
+  autoprefixer@latest \
   eslint@^8.56.0 \
-  eslint-config-next@14.1.0 \
-  eslint-config-prettier@^9.1.0 \
-  eslint-plugin-react@^7.33.2 \
-  eslint-plugin-react-hooks@^4.6.0 \
-  husky@^8.0.3 \
-  jest@^29.7.0 \
-  jest-environment-jsdom@^29.7.0 \
-  lint-staged@^15.2.0 \
-  postcss@^8.4.33 \
-  prettier@^3.2.4 \
-  prettier-plugin-tailwindcss@^0.5.11 \
-  supabase@^1.136.3 \
-  tailwindcss@^3.4.1 \
-  typescript@^5.3.3
+  eslint-config-next@latest \
+  eslint-config-prettier@latest \
+  eslint-plugin-react@latest \
+  eslint-plugin-react-hooks@^5.1.0 \
+  husky@^9.1.7 \
+  jest@latest \
+  jest-environment-jsdom@latest \
+  lint-staged@latest \
+  postcss@latest \
+  prettier@latest \
+  prettier-plugin-tailwindcss@^0.6.9 \
+  supabase@latest \
+  tailwindcss@latest \
+  typescript@latest
 ```
 
 ### Step 3: Project Structure Setup
