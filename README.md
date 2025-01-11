@@ -1,4 +1,4 @@
-# Template_FullStackAgentic
+# Template: Fullstack Agentic
 A template for full stack development of applications with agentic workflows 
 
 # Advanced Full-Stack AI Development Template
