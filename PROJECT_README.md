@@ -71,12 +71,7 @@ A production-ready template for building AI-powered applications with robust dat
 ### Step 1: Environment Setup
 
 #### Option A: Automatic Setup (Recommended)
-```bash
-git clone https://github.com/your-username/your-project-name
-cd your-project-name
-chmod +x scripts/setup-env.sh
-./scripts/setup-env.sh
-```
+
 
 #### Option B: Manual Environment Setup
 ```bash
@@ -101,10 +96,6 @@ brew install --cask docker
 ### Step 2: Project Initialization
 
 #### Option A: Automatic Setup
-```bash
-chmod +x scripts/init-project.sh
-./scripts/init-project.sh
-```
 
 #### Option B: Manual Project Setup
 1. Create Next.js project:
@@ -164,10 +155,6 @@ pnpm add -D @playwright/test@latest \
 ### Step 3: Project Structure Setup
 
 #### Option A: Automatic Setup
-```bash
-chmod +x scripts/setup-structure.sh
-./scripts/setup-structure.sh
-```
 
 #### Option B: Manual Structure Setup
 ```bash
