@@ -309,140 +309,25 @@ Create `.prettierrc`:
 }
 ```
 
-### 6. Install Dependencies
-
-```bash
-# Install all dependencies
-npm install
-
-# Verify installations
-npm list @langchain/core
-npm list @supabase/supabase-js
-npm list @tavily/js
-```
-
-### 7. Configuration Files
-
-Create the following configuration files:
-
-**.env.example**:
-```env
-# App
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
-SUPABASE_SERVICE_ROLE_KEY=
-
-# OpenAI
-OPENAI_API_KEY=
-
-# Anthropic
-ANTHROPIC_API_KEY=
-
-# Tavily
-TAVILY_API_KEY=
-```
-
-**tailwind.config.js**:
-```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-    },
-  },
-  plugins: [require("tailwindcss-animate")],
-}
-```
-
 ## Database Setup
 
-### 1. Install Supabase CLI
+### Verify and Initialize Supabase
 
 ```bash
-pnpm add -g supabase
+# Verify Supabase CLI installation
+supabase -v
 ```
 
-### 2. Initialize Supabase
+```bash 
+# Initialize and start Supabase
+supabase init
+supabase start
+```
+
+### Synchronize Types
 
 ```bash
-# Initialize Supabase
-supabase init
-
-# Start Supabase services
-supabase start
-
-# Generate database types
+# Synchronize types with local environment for Typescript alignment
 supabase gen types typescript --local > types/supabase.ts
 ```
 
