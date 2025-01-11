@@ -35,15 +35,20 @@ A production-ready template for building AI-powered applications with robust dat
 ## 📁 Project Structure
 
 ```bash
+src/
 ├── app/
-│   ├── (auth)/          # Auth routes
+│   ├── (auth)/          # Auth routes (login, register)
+│   │   ├── login/       
+│   │   └── register/    
 │   ├── (dashboard)/     # Protected routes
-│   ├── api/             # API routes
-│   └── agents/          # AI Agent routes
+│   │   └── dashboard/   
+│   └── api/             # API routes
+│       ├── agents/      # Agent-related endpoints
+│       └── auth/        # Auth-related endpoints
 ├── components/
 │   ├── ui/             # shadcn/ui components
 │   ├── shared/         # Shared components
-│   └── agents/         # Agent-specific components
+│   └── forms/          # Form components
 ├── lib/
 │   ├── agents/         # Agent definitions & tools
 │   ├── ai/             # AI service integrations
@@ -61,9 +66,6 @@ A production-ready template for building AI-powered applications with robust dat
 ├── config/            # Configuration files
 ├── docs/              # Documentation files
 └── scripts/           # Setup and utility scripts
-    ├── setup-env.sh
-    ├── init-project.sh
-    └── setup-structure.sh
 ```
 
 ## 🛠️ Installation & Setup
