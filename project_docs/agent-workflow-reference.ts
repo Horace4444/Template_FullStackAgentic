@@ -141,9 +141,8 @@ graph.run().then(console.log).catch(console.error);
 // The primary goal is to demonstrate how to define nodes (representing actions), edges (defining the flow),
 // conditional logic (for branching and looping), tool calling (for external interactions), and basic data passing
 // between nodes. This example now includes a Supabase integration example. This is how you would connect
-// to and query a Supabase database within your LangGraph workflow. Remember to replace the placeholder
-// Supabase URL and key with your actual credentials. Adapt the Supabase query to match your specific
+// to and query a Supabase database within your LangGraph workflow. Remember to adapt the Supabase query to match your specific
 // database schema and requirements. This example prioritizes clear structure and demonstration of
 // LangGraph features and Supabase integration over complex database logic. Use this code as a structural
-// reference for building your own agentic workflows, adapting the nodes and edges to your specific
+// reference for building agentic workflows, adapting the nodes and edges to our specific
 // requirements.
