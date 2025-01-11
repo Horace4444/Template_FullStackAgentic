@@ -119,11 +119,13 @@ pnpm add @langchain/anthropic@^0.0.9 \
   @langchain/core@^0.1.22 \
   @langchain/langgraph@^0.0.6 \
   @langchain/openai@^0.0.14 \
-  @supabase/ssr@^0.0.10 \
-  @supabase/supabase-js@^2.39.3 \
+  @supabase/ssr@latest \
+  @supabase/supabase-js@latest \
   @tavily/core@^0.0.2 \
   class-variance-authority@^0.7.0 \
   clsx@^2.1.0 \
+  react@^19.0.0 \
+  react-dom@^19.0.0 \
   tailwind-merge@^2.2.0 \
   tailwindcss-animate@^1.0.7 \
   zod@^3.22.4 \
@@ -135,7 +137,7 @@ pnpm add @langchain/anthropic@^0.0.9 \
 pnpm add -D @playwright/test@latest \
   @testing-library/dom@^10.0.0 \
   @testing-library/jest-dom@latest \
-  @testing-library/react@^14.1.2 \
+  @testing-library/react@^16.1.0 \
   @types/jest@latest \
   @types/node@latest \
   @types/react@^19.0.4 \
