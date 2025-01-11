@@ -190,14 +190,33 @@ mkdir -p \
 
 1. Set up environment variables:
 ```bash
-cp .env.example .env.local
+touch .env.local
 ```
 
 2. Configure your `.env.local` with required API keys:
 ```env
+# App
 NEXT_PUBLIC_APP_URL=http://localhost:3000
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-# ... other environment variables
+
+# Authentication (NextAuth.js)
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-generated-nextauth-secret
+
+# Database (Supabase)
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
+
+# AI Services
+OPENAI_API_KEY=your-openai-api-key
+ANTHROPIC_API_KEY=your-anthropic-api-key
+TAVILY_API_KEY=your-tavily-api-key
+
+# Vector Database
+VECTOR_STORE_URL=your-supabase-project-url # Usually same as SUPABASE_URL
+
+# Development
+NODE_ENV=development
 ```
 
 ### Verification
