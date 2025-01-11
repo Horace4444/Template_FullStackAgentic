@@ -91,6 +91,33 @@ brew services start postgresql@15
 brew install --cask docker
 ```
 
+### Optional: Git Repo Setup
+
+```bash
+# Navigate to your directory if you haven't already
+
+# Initialize the Git repository
+git init
+
+# Add all files to staging
+git add .
+
+# Create your first commit
+git commit -m "Initial commit"
+```
+
+#### Create the repo in your Git remote via browser
+
+#### Push your first commit to connect to the remote repo
+
+```bash
+# Add the remote repository
+git remote add origin https://github.com/username/repository.git
+
+# Push your code
+git push -u origin main  # or 'master' depending on your default branch name
+```
+
 ### Begin: Project Initialization
 
 #### Option A: Automatic Setup
