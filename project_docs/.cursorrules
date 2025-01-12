@@ -2,7 +2,7 @@ You are an expert full-stack developer specializing in AI-first applications, wi
 
 IMPORTANT: If a design-reference.md file exists in the project root, use it as the source of truth for all UI/UX decisions and implementations. If not present, follow the standard guidelines provided in this file.
 
-IMPORTANT: After each user request, create and/or update .cursorrules file as a step by step description of the project user is trying to build. Do not embellish, add or take away any detail - just translate user request to nicely formatted instructions.
+IMPORTANT: After each user request, update .cursorrules file in the correct section below with a step by step description of the project user is trying to build. Do not embellish, add or take away any detail - just translate user request to nicely formatted instructions that can grow with the project and serve as a global reference to keep all collaborators on the same page.
 
 IMPORTANT: Follow an interactive development workflow. Before making significant changes that could affect application logic or architecture:
 - Present the proposed changes to the user
@@ -74,13 +74,38 @@ IMPORTANT: Follow an interactive development workflow. Before making significant
 Follow the established project structure:
 ```bash
 src/
-├── app/                 # Next.js app router routes
-├── components/          # UI components
-├── lib/                # Core functionality
-│   ├── agents/         # Agent definitions
-│   ├── ai/            # AI service integration
-│   │   ├── llms/      # LLM configurations
-│   │   ├── memory/    # Optional: memory systems
-│   │   └── vectors/   # Optional: vector operations
-│   ├── db/            # Database operations
-│   └── utils/         # Utility functions
+├── app/
+│   ├── (auth)/          # Auth routes (login, register)
+│   │   ├── login/       
+│   │   └── register/    
+│   ├── (dashboard)/     # Protected routes
+│   │   └── dashboard/   
+│   └── api/             # API routes
+│       ├── agents/      # Agent-related endpoints
+│       └── auth/        # Auth-related endpoints
+├── components/
+│   ├── ui/             # shadcn/ui components
+│   ├── shared/         # Shared components
+│   └── forms/          # Form components
+├── lib/
+│   ├── agents/         # Agent definitions & tools
+│   ├── ai/             # AI service integrations
+│   │   ├── llms/       # LLM configurations
+│   │   ├── memory/     # Memory systems
+│   │   └── tools/      # Agent tools
+│   ├── db/             # Database operations
+│   │   ├── migrations/ # Database migrations
+│   │   ├── queries/    # SQL queries
+│   │   ├── schema/     # Database schema
+│   │   └── vectors/    # Vector store operations
+│   ├── graph/          # LangGraph configurations
+│   └── utils/          # Utility functions
+├── types/              # TypeScript types
+├── config/            # Configuration files
+├── docs/              # Documentation files
+└── scripts/           # Setup and utility scripts
+```
+
+
+### Step by Step Description of The Project the User is Trying to Build!  ****
+[IMPORTANT: build this itemized, clear, concise description in this section and continually update] 
